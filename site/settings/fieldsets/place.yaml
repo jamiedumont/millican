@@ -1,0 +1,24 @@
+taxonomies:
+  tour: true
+title: Place
+create_title: Place
+fields:
+  name:
+    type: text
+    display: Name
+  description:
+    type: textarea
+    display: Description
+  latitude:
+    type: text
+    display: Latitude
+  longitude:
+    type: text
+    display: Longitude
+  country:
+    type: select
+    display: Country
+    options:
+      france: France
+      germany: Germany
+      italy: Italy

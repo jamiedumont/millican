@@ -1,0 +1,7 @@
+collections:
+  posts: '/post/{slug}'
+taxonomies:
+  place: '/place/{slug}'
+  tour: '/tour/{slug}'
+  categories: '/category/{slug}'
+routes: [ ]

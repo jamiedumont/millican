@@ -1,0 +1,10 @@
+taxonomies: false
+title: Tour
+create_title: Tour
+fields:
+  year:
+    type: text
+    display: Year
+  description:
+    type: textarea
+    display: Description

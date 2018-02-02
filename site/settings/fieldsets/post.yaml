@@ -1,0 +1,19 @@
+taxonomies:
+  place: true
+  tour: true
+  categories: true
+title: Post
+create_title: Post
+fields:
+  title:
+    type: title
+    display: Title
+    localizable: true
+  content:
+    type: bard
+    display: Content
+  lead_image:
+    type: assets
+    display: Lead Image
+    container: main
+    folder: /

@@ -1,0 +1,6 @@
+taxonomies:
+  place: true
+  tour: true
+title: Category
+hide: true
+fields: [ ]
