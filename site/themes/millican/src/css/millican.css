@@ -17,3 +17,13 @@
 
 @import "tailwind/_utilities";
 
+/* Further utilities */
+
+.l-9999 {
+   left: -9999px;
+}
+
+.min-h-24rem {
+   min-height: 24rem;
+}
+

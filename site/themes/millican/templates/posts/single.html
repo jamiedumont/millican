@@ -1,0 +1,30 @@
+{{ partial:header }}
+<div class="">
+
+   <span>Date: {{ datestring }}</span>
+   <span></span>
+
+   <div class="bard">
+      {{ content }}
+   </div>
+
+   <div>
+
+      {{ relate:places }}
+      {{ title }}
+
+      {{ description }}
+
+         {{ country }}
+            Country:   {{ title }}
+         {{ /country }}
+      {{ /relate:places }}
+
+
+
+
+         {{ categories }}
+            Category: {{ title }}
+         {{ /categories }}
+   </div>
+</div>
