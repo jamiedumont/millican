@@ -1,0 +1,8 @@
+taxonomies: false
+title: Country
+fields:
+  flag:
+    type: assets
+    display: Flag
+    container: main
+    folder: /

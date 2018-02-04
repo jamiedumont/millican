@@ -1,3 +1,4 @@
 title: Posts
 order: date
 fieldset: post
+template: posts/single

@@ -1,6 +1,4 @@
 taxonomies:
-  place: true
-  tour: true
   categories: true
 title: Post
 create_title: Post
@@ -17,3 +15,9 @@ fields:
     display: Lead Image
     container: main
     folder: /
+  places:
+    type: collection
+    display: Places
+    mode: tags
+    collection:
+      - places

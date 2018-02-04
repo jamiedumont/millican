@@ -1,7 +1,8 @@
 collections:
   posts: '/post/{slug}'
+  placecol: '/places/{slug}'
+  places: '/places/{slug}'
 taxonomies:
-  place: '/place/{slug}'
-  tour: '/tour/{slug}'
   categories: '/category/{slug}'
+  country: '/country/{slug}'
 routes: [ ]
