@@ -2,7 +2,9 @@
 .env
 node_modules/
 bower_components/
-local/cache/*
-local/storage/*
-local/temp/*
+local
+statamic
 installer.php
+phpunit.xml
+please
+index.php
