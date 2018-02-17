@@ -1,30 +1,46 @@
 {{ partial:header }}
-<div class="">
+<div class="mx-4 my-8 clearfix md:w-4/5 md:mx-auto" id="top-info-bar">
+   <dl class="float-left w-1/2 md:mx-4 md:float-none md:inline-block md:w-auto">
+      <dd class="text-xs font-light tracking-wide uppercase mb-2">Date</dd>
+      <dd class="text-sm font-semibold">{{ datestring }}</dd>
+   </dl>
+   <dl class="float-left w-1/2 md:mx-4 md:float-none md:inline-block md:w-auto">
+      <dd class="text-xs font-light tracking-wide uppercase mb-2">Author</dd>
+      <dd class="text-sm font-semibold">Martin</dd>
+   </dl>
+</div>
+<div class="flex flex-wrap mx-auto md:w-4/5">
 
-   <span>Date: {{ datestring }}</span>
-   <span></span>
 
-   <div class="bard">
-      {{ content }}
+   <div id="main-article body" class="px-4 w-full md:w-5/6 ">
+
+
+
+      <div class="bard">
+         {{ content }}
+      </div>
+
    </div>
 
-   <div>
 
-      {{ relate:places }}
-      {{ title }}
+   <div class="px-6 w-full md:w-1/6">
+      Sidebar
+         {{ relate:places }}
+         {{ title }}
 
-      {{ description }}
+         {{ description }}
 
-         {{ country }}
-            Country:   {{ title }}
-         {{ /country }}
-      {{ /relate:places }}
-
-
+            {{ country }}
+               Country:   {{ title }}
+            {{ /country }}
+         {{ /relate:places }}
 
 
-         {{ categories }}
-            Category: {{ title }}
-         {{ /categories }}
+
+
+            {{ categories }}
+               Category: {{ title }}
+            {{ /categories }}
    </div>
+
 </div>
