@@ -3,13 +3,23 @@ taxonomies:
 title: Post
 create_title: Post
 fields:
-  title:
-    type: title
-    display: Title
-    localizable: true
+  subtitle:
+    type: textarea
+    display: Subtitle
+    instructions: |
+      On an article page, it appears just below the title, over the lead image.
+      
+      In a preview (on an index page or list) it appears below the image.
   content:
     type: bard
     display: Content
+    spellcheck: true
+    allow_source: true
+    autoLink: true
+    target_blank: true
+    link_validation: true
+    container: main
+    folder: /
   lead_image:
     type: assets
     display: Lead Image
