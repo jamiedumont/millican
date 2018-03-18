@@ -1,0 +1,36 @@
+{{ partial:nav colour="black" }}
+
+<h1 class="text-center font-bold text-4xl mt-4 mb-8">{{ title }}</h1>
+
+{{ section:main }}
+
+  {{ collection:posts }}
+
+  <div class="clearfix py-6 border-grey-light border-b">
+    {{ asset:lead_image }}
+    <img class="md:w-1/3" src="{{ url }}" alt="{{ alt }}">
+    {{ /asset:lead_image }}
+    <div class="md:float-right md:w-2/3 md:pl-8">
+      <h6 class="mt-4 md:mt-2 text-xs font-bold uppercase lined">
+        {{ categories }} {{ title }} {{ /categories }}
+      </h6>
+
+      <h2 class="my-2 md:my-4 text-2xl md:text-3xl">{{ title }}</h2>
+      <p class="text-sm md:text-base leading-normal mb-4 text-grey-dark">{{ summary }}</p>
+
+      <a class="float-right text-sm px-3 py-2 bg-cherry hover:bg-cherry-dark rounded text-white uppercase font-bold no-underline" href="{{ url }}">Read more</a>
+    </div>
+  </div>
+
+  {{ /collection:posts }}
+
+{{ /section:main }}
+
+
+
+
+
+{{ section:sidebar }}
+
+{{ /section:sidebar }}
+

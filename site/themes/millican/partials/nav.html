@@ -1,0 +1,28 @@
+  <nav class="clearfix pt-3 pb-2">
+
+    <h1 class="ma-0 relative z-30">
+      <a class="mx-auto text-{{ colour }} w-32 lg:w-48 block" href="/">
+         {{ theme:output src="img/millican-logo.svg" }}
+         <span class="absolute h-0 l-9999">{{ site_title }}</span>
+      </a>
+    </h1>
+
+
+    {{# MOBILE NAVIGATION NOT CURRENTLY NEEDED
+    <a class="z-50 absolute pin-t pin-r text-{{ colour }} px-6 py-6 lh-loose text-sml cursor-pointer no-underline" id="menu-button" href="#">Menu</a>
+
+    <div class="h-screen bg-white text-black absolute pin z-40 overflow-auto" id="site-navigation">
+      <a class="mx-auto text-black w-24 m-4 block" href="">
+         {{ theme:output src="img/logo.svg" }}
+         <span class="absolute h-0 l-9999">{{ site_title }}</span>
+       </a>
+
+       <a class="block text-lg text-center text-cherry hover:text-cherry-dark no-underline font-semibold leading-normal" href="/posts">All Posts</a>
+
+
+     </div>
+
+     #}}
+
+
+  </nav>

@@ -6,7 +6,18 @@
 @import "tailwind/_preflight";
 
 
+/* Baseline */
+@import "baseline/_body";
+
+
 /* Components */
+
+@import "components/_bard";
+
+@import "components/_post-preview";
+
+@import "components/_mobile-nav";
+
 
 
 
@@ -19,11 +30,40 @@
 
 /* Further utilities */
 
+@import "utilities/_aspect-ratio";
+
 .l-9999 {
    left: -9999px;
 }
 
-.min-h-24rem {
-   min-height: 24rem;
-}
+@responsive {
 
+  .bg-black-50 {
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .max-w-1\/3 {
+    max-width: 33.33333%;
+  }
+
+  .w-90 {
+    width: 90%;
+  }
+
+  .pl-9 {
+    padding-left: 2.5rem;
+  }
+
+  .min-h-24rem {
+     min-height: 24rem;
+  }
+
+  .min-h-28rem {
+    min-height: 28rem;
+  }
+
+  .min-h-36rem {
+    min-height: 36rem;
+  }
+
+}

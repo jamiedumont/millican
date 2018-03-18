@@ -1,0 +1,51 @@
+.bard {
+
+  p {
+    @apply .leading-normal .mb-6 .text-grey-darkest .font-light;
+
+    b {
+      @apply .font-semibold;
+    }
+  }
+
+  a {
+    @apply .no-underline .font-semibold .text-cherry-light;
+  }
+
+  h2 {
+    @apply .mb-4 .mt-8 .text-4xl;
+  }
+
+  h3 {
+    @apply .mb-4 .mt-8 .text-2xl;
+  }
+
+  ol, ul {
+    @apply .mb-6;
+  }
+
+  blockquote {
+    @apply .border-l-4 .border-grey .pl-8;
+    p {
+      @apply .text-2xl .italic .font-serif;
+    }
+  }
+
+  figure {
+    @apply .text-center .w-full .mb-6;
+
+    img {
+      @apply .w-full;
+    }
+
+    figcaption {
+      @apply .text-grey-dark .my-2 .italic .text-center .text-xs .font-hairline;
+    }
+
+  }
+
+  .three-images {
+    @apply .mb-6;
+  }
+
+}

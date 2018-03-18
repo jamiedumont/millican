@@ -1,0 +1,9 @@
+#site-navigation {
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+#site-navigation.open {
+  transform: translateY(0);
+}

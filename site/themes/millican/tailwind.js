@@ -56,6 +56,10 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
+  'cherry-dark': '#b01445',
+  'cherry': '#cc1b53',
+  'cherry-light': '#e92663',
+
   'red-darkest': '#3b0d0c',
   'red-darker': '#621b18',
   'red-dark': '#cc1f1a',
@@ -250,6 +254,7 @@ module.exports = {
   */
 
   textSizes: {
+    'ss': '.6rem;',
     'xs': '.75rem',     // 12px
     'sm': '.875rem',    // 14px
     'base': '1rem',     // 16px
@@ -629,6 +634,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.5rem',
+    '16': '4rem',
   },
 
 
@@ -657,6 +664,9 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.5rem',
+    '16': '4rem',
+    '32': '8rem',
   },
 
 

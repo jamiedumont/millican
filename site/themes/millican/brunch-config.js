@@ -34,5 +34,9 @@ exports.config = {
 
   npm: {
     enabled: true
+  },
+
+  modules: {
+    wrapper: false
   }
 };

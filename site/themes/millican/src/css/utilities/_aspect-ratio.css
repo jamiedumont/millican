@@ -1,0 +1,25 @@
+.aspect-ratio {
+  @apply .relative;
+  height: 0;
+}
+
+
+.ar__object {
+  @apply .absolute .pin .w-full .h-full .z-50;
+}
+
+@responsive {
+
+  .ar--1x1 {
+    padding-bottom: 100%;
+  }
+
+  .ar--4x3 {
+    padding-bottom: 75%;
+  }
+
+  .ar--16x9 {
+    padding-bottom: 56.25%;
+  }
+
+}

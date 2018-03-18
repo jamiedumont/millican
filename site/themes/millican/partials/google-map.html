@@ -1,0 +1,22 @@
+<script>
+
+  var lat = {{ relate:places }}{{ latitude }}{{ /relate:places }};
+  var lng = {{ relate:places }}{{ longitude }}{{ /relate:places }};
+
+  function initMap() {
+      var location = {lat: lat, lng: lng};
+      var map = new google.maps.Map(document.getElementById('google-map'), {
+        zoom: 4,
+        center: location
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+  }
+
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-1zCGgZYjsWKpMy1958RcHWR2kdriqiA&callback=initMap">
+</script>

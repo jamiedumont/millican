@@ -1,0 +1,14 @@
+    <span class="block lined text-xs font-bold uppercase mb-4">Where are we</span>
+
+    {{ relate:places }}
+
+      <!-- google map -->
+      <div class="aspect-ratio ar--4x3 md:ar--1x1 mb-4">
+        <div class="ar__object" id="google-map"></div>
+      </div>
+
+      <a href="{{ url }}" class="block no-underline text-pink-darkest font-semibold mb-2">{{ title }}, {{ country }} {{ title }} {{ /country }}</a>
+      <p class="text-xs font-light text-gray-light mb-4">{{ latitude }}, {{ longitude }}</p>
+      <a class="px-3 py-2 no-underline rounded text-white text-xs font-semibold bg-cherry hover:bg-cherry-dark" href="{{ url }}">See more</a>
+
+    {{ /relate:places }}

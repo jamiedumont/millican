@@ -1,32 +1,26 @@
-<header class="relative min-h-24rem bg-black w-full bg-center bg-cover" style="">
-  <nav class="clearfix pt-3 pb-2">
+<header
+  class="relative min-h-24rem md:min-h-28rem lg:min-h-36rem bg-black w-full bg-center bg-cover"
+  style="{{ asset:lead_image}}background-image:url('{{ glide :src="url" brightness="-20" contrast="-20" }}');{{ /asset:lead_image }}"
+>
 
-    <h1 class="ma-0 relative z-30">
-      <a class="ml-4 text-white w-32 block" href="">
-         {{ theme:output src="img/logo.svg" }}
-         <span class="absolute h-0 l-9999">{{ site_title }}</span>
+  {{ partial:nav colour="white" }}
+
+  <div class="absolute pin-b w-full pb-8">
+
+    <div id="feature" class="w-5/6 max-w-2xl mx-auto mb-8">
+
+      {{ categories }}
+        <h6 class="text-white font-bold uppercase lined lined-white text-xs mb-2">{{ title }}</h6>
+      {{ /categories }}
+
+      <a class="block text-white no-underline cursor-pointer md:w-2/3 md:mb-2" href="">
+        <h1 class="text-3xl md:text-5xl">{{ title }}</h1>
       </a>
-    </h1>
 
-    <a class="absolute pin-t pin-r text-white px-6 py-6 lh-loose text-sml cursor-pointer no-underline" id="menu-button" href="">Menu</a>
-
-    <ul class="hidden bg-white absolute pin-t pin-x z-50" id="site-navigation">
-      <li>Example</li>
-    </ul>
-
-    <div id="feature" class="w-full pt-10">
-
-      <div class="clearfix py-4 px-3 md:w-4/5 mx-auto">
-          {{ categories }}
-             Category: {{ title }}
-          {{ /categories }}
-        <a class="float-left text-white no-underline cursor-pointer md:w-2/3" href="">
-           <h1 class="text-2xl md:text-3xl">{{ title }}</h1>
-
-        </a>
-      </div>
+      <p class="hidden md:block text-white font-light max-w-sm leading-normal lg:text-lg">{{ summary }}</p>
 
     </div>
 
-  </nav>
+  </div>
+
 </header>
