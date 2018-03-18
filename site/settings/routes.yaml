@@ -5,4 +5,10 @@ collections:
 taxonomies:
   categories: '/category/{slug}'
   country: '/country/{slug}'
-routes: [ ]
+routes:
+  /:
+    template: home
+    title: Home
+  /posts:
+    template: 'posts/index'
+    title: All Posts
