@@ -13,3 +13,11 @@ fields:
   longitude:
     type: text
     display: Longitude
+  gallery:
+    type: assets
+    display: Gallery
+    instructions: "A gallery of the photos you've taken at this place."
+    container: main
+    folder: img
+    restrict: true
+    mode: grid
