@@ -38,11 +38,11 @@
 
    {{ /collection:posts }}
 
-   <div id="similar-posts" class="hidden md:block">
+   <div id="more-posts" class="hidden md:block">
      {{ collection from="posts" :url:not="url" limit="3" as="posts" }}
 
      {{ if posts }}
-       <h2 class="text-sm lined uppercase mb-4 font-bold">Similar posts</h2>
+       <h2 class="text-sm lined uppercase mb-4 font-bold">More</h2>
        <div class="flex -mx-4">
 
          {{ posts }}
@@ -53,8 +53,11 @@
 
      {{ /if }}
 
-
      {{ /collection }}
+
+     <div class="w-full flex justify-center">
+       <a class="mb-8 px-3 py-2 rounded bg-cherry hover:bg-cherry-dark text-white text-sm font-semibold uppercase  no-underline" href="/posts">All posts</a>
+     </div>
 
 
    </div>
@@ -69,7 +72,7 @@
 
   <div class="my-8 text-center pt-4 border-t border-grey-lighter md:border-none">
 
-    <!-- <div class="mb-8">
+    <div class="mb-10">
       <span class="block lined text-xs font-bold uppercase mb-4">About Us</span>
       <p class="text-left text-xs text-grey-darkest font-light leading-normal">
         Millican is a theme for travellers &amp; adventurers to share their journey. It links the articles and photos you post to locations, making easy for those back at home to keep track of where you've been. Millican creates a wonderful record of your travels, something you'll look back on and enjoy all over again.
@@ -77,7 +80,7 @@
       </p>
     </div>
 
-    <div class="mb-8">
+    <div class="mb-10">
       <span class="block lined text-xs font-bold uppercase mb-4">Email updates</span>
       <p class="text-left text-xs text-grey-darkest font-light leading-normal mb-2">
         Subscribe and get email updates whenever we post.
@@ -88,8 +91,8 @@
       </form>
     </div>
 
-    <div class="mb-8">
-      <span class="block lined text-xs font-bold uppercase mb-4">Categories</span>
+    <div class="mb-10">
+      <span class="block lined text-xs font-bold uppercase mb-4">Posts by Category</span>
       <ul class="text-left list-reset">
         {{ taxonomy:categories }}
           <li class="mb-1 text-xs">
@@ -100,8 +103,8 @@
     </div>
 
 
-    <div class="mb-8">
-      <span class="block lined text-xs font-bold uppercase mb-4">Countries</span>
+    <div class="mb-10">
+      <span class="block lined text-xs font-bold uppercase mb-4">Posts by Country</span>
       <ul class="text-left list-reset">
         {{ taxonomy:country }}
           <li class="mb-1 text-xs">
@@ -109,7 +112,7 @@
           </li>
         {{ /taxonomy:country }}
       </ul>
-    </div> -->
+    </div>
   </div>
 
 {{ /section:sidebar }}
