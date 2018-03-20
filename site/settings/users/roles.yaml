@@ -1,0 +1,34 @@
+d18a9497-d028-45c5-8d4b-8ad9303a1ab2:
+  title: Editor
+  slug: editor
+  permissions:
+    - cp:access
+    - content:view_drafts_on_frontend
+    - resolve_duplicates
+    - pages:view
+    - pages:edit
+    - pages:create
+    - pages:delete
+    - pages:reorder
+    - collections:places:view
+    - collections:places:edit
+    - collections:places:create
+    - collections:places:delete
+    - collections:posts:view
+    - collections:posts:edit
+    - collections:posts:create
+    - collections:posts:delete
+    - taxonomies:categories:view
+    - taxonomies:categories:edit
+    - taxonomies:categories:create
+    - taxonomies:country:view
+    - taxonomies:country:edit
+    - taxonomies:country:create
+    - globals:global:view
+    - globals:global:edit
+    - globals:social_networks:view
+    - globals:social_networks:edit
+    - assets:main:view
+    - assets:main:edit
+    - assets:main:create
+    - users:view
