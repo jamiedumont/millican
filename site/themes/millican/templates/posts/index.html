@@ -1,12 +1,12 @@
-{{ partial:nav colour="black" }}
+{{ partial:header }}
 
-<h1 class="text-center font-bold text-4xl mt-4 mb-8">{{ title }}</h1>
+<!-- <h1 class="text-center font-bold text-4xl mt-4 mb-8">{{ title }}</h1> -->
 
 {{ section:main }}
 
   {{ collection:posts }}
 
-  <div class="clearfix py-6 border-grey-light border-b">
+  <div class="clearfix py-8 border-grey-light border-b">
     {{ asset:lead_image }}
     <img class="md:w-1/3" src="{{ url }}" alt="{{ alt }}">
     {{ /asset:lead_image }}
@@ -33,4 +33,3 @@
 {{ section:sidebar }}
 
 {{ /section:sidebar }}
-
