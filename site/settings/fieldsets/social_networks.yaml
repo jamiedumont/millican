@@ -1,0 +1,59 @@
+title: Social Networks
+taxonomies: false
+fields:
+  facebook:
+    type: section
+    display: Facebook
+  facebook_display:
+    type: toggle
+    display: Display
+    width: 25
+  facebook_profile:
+    type: text
+    display: Profile URL
+    instructions: A link to your Facebook profile
+    width: 75
+    show_when:
+      facebook_display: true
+  twitter:
+    type: section
+    display: Twitter
+  twitter_display:
+    type: toggle
+    display: Display
+    width: 25
+  twitter_profile:
+    type: text
+    display: Profile URL
+    instructions: A link to your Twitter profile
+    width: 75
+    show_when:
+      twitter_display: true
+  instagram:
+    type: section
+    display: Instagram
+  instagram_display:
+    type: toggle
+    display: Display URL
+    width: 25
+  instagram_profile:
+    type: text
+    display: Profile
+    instructions: A link to your Instagram profile
+    width: 75
+    show_when:
+      instagram_display: true
+  youtube:
+    type: section
+    display: YouTube
+  youtube_display:
+    type: toggle
+    display: Display URL
+    width: 25
+  youtube_profile:
+    type: text
+    display: Profile
+    instructions: A link to your YouTube profile
+    width: 75
+    show_when:
+      youtube_display: true

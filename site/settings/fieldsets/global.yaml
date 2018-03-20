@@ -1,0 +1,30 @@
+title: Globals
+taxonomies: false
+fields:
+  site_name:
+    type: text
+    display: Site Name
+  site_description:
+    type: textarea
+    display: Site Description
+    instructions: Write a brief paragraph about your site. This will be used to help SEO. 50-300 characters is considered "optimal" by Google.
+  contact_email:
+    type: text
+    display: Contact Email
+    instructions: Email address used in footer. Leave blank if you don't want to share an address.
+  logo:
+    type: assets
+    display: Logo
+    instructions: Upload your logo, if you have one. It should be a JPEG, PNG or SVG.
+    container: main
+    folder: /logos
+    restrict: true
+    max: '1'
+  lead_image:
+    type: assets
+    display: Lead Image
+    instructions: Fallback image for the header on each page. Will be overridden by any Lead Images declared on individual pages.
+    container: main
+    folder: /lead_images
+    restrict: true
+    max: '1'
