@@ -1,8 +1,7 @@
 taxonomies: false
 title: Country
 fields:
-  flag:
-    type: assets
-    display: Flag
-    container: main
-    folder: /
+  emoji_flag:
+    type: text
+    display: Emoji flag
+    instructions: Find the correct flag from your Emojis and put it here.
