@@ -1,8 +1,46 @@
-<h1>{{ title }}</h1>
+{{ partial:header }}
+
+{{ section:main }}
 
 {{ country }}
-{{ title }}
-{{ assets:flag }}
-<img src="{{ url }}" alt="{{ alt }}">
-{{ /assets:flag }}
+  {{ title }}
+  {{ emoji_flag }}
 {{ /country }}
+
+<div class="mt-8 mb-32">
+  {{ description }}
+</div>
+
+{{ assets:gallery }}
+
+<img src="{{ url }}" alt="{{ alt }}">
+
+{{ /assets:gallery }}
+
+See posts from this place
+
+{{ /section:main }}
+
+
+{{ section:sidebar }}
+
+{{ /section:sidebar }}
+
+
+<script>
+
+  var images = [
+    {{ assets:gallery }}
+
+      {
+        src: '{{ url }}',
+        w: {{ width }},
+        h: {{ height }}
+      },
+
+    {{ /assets:gallery }}
+  ];
+
+  console.log(images);
+
+</script>

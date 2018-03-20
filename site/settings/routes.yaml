@@ -12,3 +12,6 @@ routes:
   /posts:
     template: 'posts/index'
     title: All Posts
+  /places:
+    template: 'places/index'
+    title: All Places

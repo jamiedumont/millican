@@ -7,17 +7,22 @@ fields:
   description:
     type: textarea
     display: Description
-  latitude:
-    type: text
-    display: Latitude
-  longitude:
-    type: text
-    display: Longitude
+    instructions: Brief description of the place, what there is to do, what you liked about it, etc...
   gallery:
     type: assets
     display: Gallery
-    instructions: "A gallery of the photos you've taken at this place."
+    instructions: A gallery of the photos you've taken here.
     container: main
-    folder: img
-    restrict: true
+    folder: img/places
     mode: grid
+  location:
+    type: section
+    display: Location
+  latitude:
+    type: text
+    display: Latitude
+    width: 50
+  longitude:
+    type: text
+    display: Longitude
+    width: 50

@@ -1,0 +1,23 @@
+{{ partial:header }}
+
+{{ section:main }}
+
+All Places
+
+  {{ collection:places }}
+
+    <div>
+      {{ title }}
+
+      {{ country }}
+        {{ title }} - {{ emoji_flag }}
+      {{ /country }}
+    </div>
+
+  {{ /collection:places }}
+
+{{ /section:main }}
+
+{{ section:sidebar }}
+
+{{ /section:sidebar }}
