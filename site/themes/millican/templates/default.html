@@ -1,6 +1,18 @@
-<div class="container">
-    <h1>{{ title }}</h1>
-    <hr/>
-    {{ content }}
-</div>
+{{ partial:header }}
 
+{{ section:main }}
+
+<div class="bard mt-8 mb-32">
+   {{ content_area }}
+
+    {{ partial src="content_sets/{type}" }}
+
+   {{ /content_area }}
+ </div>
+
+{{ /section:main }}
+
+
+{{ section:sidebar }}
+
+{{ /section:sidebar }}
