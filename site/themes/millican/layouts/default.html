@@ -9,7 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Another awesome Statamic site">
-    <title>{{ title or site_title }}</title>
+    <title>
+      {{ title or site_name }}
+      {{ if title }}
+      | {{ site_name }}
+      {{ /if }}
+    </title>
     <link rel="stylesheet" href="{{ theme:css }}">
     <script src="{{ theme:js }}" defer></script>
 </head>
