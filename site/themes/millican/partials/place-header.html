@@ -1,0 +1,26 @@
+<header
+  class="relative min-h-24rem md:min-h-28rem lg:min-h-36rem bg-black w-full bg-center bg-cover"
+  style="{{ asset:lead_image}}background-image:url('{{ glide :src="url" brightness="-20" contrast="-20" }}');{{ /asset:lead_image }}"
+>
+
+  {{ partial:nav colour="white" }}
+
+  <div class="absolute pin-b w-full pb-8">
+
+    <div id="feature" class="w-5/6 max-w-2xl mx-auto mb-8">
+
+      {{ country }}
+      <h6 class="text-white font-bold uppercase lined lined-white text-xs mb-2">{{ title }}&nbsp{{ emoji_flag }}</h6>
+      {{ /country }}
+
+      <a class="block text-white no-underline cursor-pointer md:w-2/3 md:mb-2" href="">
+        <h1 class="text-3xl md:text-5xl">{{ title }}</h1>
+      </a>
+
+      <p class="hidden md:block text-white font-light max-w-sm leading-normal lg:text-lg">{{ summary }}</p>
+
+    </div>
+
+  </div>
+
+</header>
