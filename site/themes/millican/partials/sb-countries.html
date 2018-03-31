@@ -1,0 +1,8 @@
+<span class="block lined text-xs font-bold uppercase mb-4">Places by Country</span>
+<ul class="list-reset">
+  {{ taxonomy:country }}
+    <li class="mb-2 text-xs">
+      <a class="text-grey-darkest no-underline hover:text-cherry hover:font-semibold" href="{{ url }}">{{ title }}</a>
+    </li>
+  {{ /taxonomy:country }}
+</ul>

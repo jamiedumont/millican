@@ -1,0 +1,8 @@
+<span class="block lined text-xs font-bold uppercase mb-4">Posts by Category</span>
+<ul class="list-reset">
+  {{ taxonomy:categories }}
+    <li class="mb-2 text-xs">
+      <a class="text-grey-darkest hover:text-cherry hover:font-semibold no-underline" href="{{ url }}">{{ title }}</a>
+    </li>
+  {{ /taxonomy:categories }}
+</ul>
