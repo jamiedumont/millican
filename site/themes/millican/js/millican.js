@@ -149,15 +149,6 @@ var __makeRelativeRequire = function(require, mappings, pref) {
 };
 "use strict";
 
-var menuButton = document.getElementById("menu-button");
-var siteNavClasses = document.getElementById("site-navigation").classList;
-
-function toggleMenu() {
-  return siteNavClasses.toggle("open");
-}
-
-menuButton.onclick = toggleMenu;
-
 require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
