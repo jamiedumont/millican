@@ -1,11 +1,6 @@
-{{ partial:header }}
+{{ partial:place-header }}
 
 {{ section:main }}
-
-{{ country }}
-  {{ title }}
-  {{ emoji_flag }}
-{{ /country }}
 
 <div class="mt-8 mb-32">
   {{ description }}
@@ -19,12 +14,36 @@
 
 See posts from this place
 
+{{ collection:posts paginate="true" limit="10" as="posts" :places:contains="id" }}
+
+{{ if no_results }}
+
+<p>No results</p>
+
+{{ else }}
+
+{{ paginate }}
+{{ if total_items == 1 }}
+1 result
+{{ else }}
+
+{{ total_items }} results
+
+{{ /if }}
+{{ /paginate }}
+
+
+{{ posts }}
+
+{{ partial:post-preview }}
+
+{{ /posts }}
+
+{{ /if }}
+
+{{ /collection:posts }}
+
 {{ /section:main }}
-
-
-{{ section:sidebar }}
-
-{{ /section:sidebar }}
 
 
 <script>

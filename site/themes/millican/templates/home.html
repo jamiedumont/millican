@@ -1,5 +1,5 @@
 {{ collection:posts limit="1" }}
-{{ partial:header }}
+{{ partial:post-header }}
 <div class="border-b border-grey-light">
 
   <div class="w-5/6 max-w-2xl mx-auto">
@@ -70,50 +70,7 @@
 
 {{ section:sidebar }}
 
-  <div class="my-8 text-center pt-4 border-t border-grey-lighter md:border-none">
-
-    <div class="mb-10">
-      <span class="block lined text-xs font-bold uppercase mb-4">About Us</span>
-      <p class="text-left text-xs text-grey-darkest font-light leading-normal">
-        Millican is a theme for travellers &amp; adventurers to share their journey. It links the articles and photos you post to locations, making easy for those back at home to keep track of where you've been. Millican creates a wonderful record of your travels, something you'll look back on and enjoy all over again.
-        <a class="no-underline font-normal text-cherry" href="/about">More...</a>
-      </p>
-    </div>
-
-    <div class="mb-10">
-      <span class="block lined text-xs font-bold uppercase mb-4">Email updates</span>
-      <p class="text-left text-xs text-grey-darkest font-light leading-normal mb-2">
-        Subscribe and get email updates whenever we post.
-      </p>
-      <form class="text-left" action="">
-        <input class="w-full block border border-grey-light p-2" name="email" type="text" placeholder="you@gmail.com">
-        <button class="bg-cherry rounded px-3 py-2 uppercase font-semibold text-sm text-white my-2 hover:bg-cherry-dark">Submit</button>
-      </form>
-    </div>
-
-    <div class="mb-10">
-      <span class="block lined text-xs font-bold uppercase mb-4">Posts by Category</span>
-      <ul class="text-left list-reset">
-        {{ taxonomy:categories }}
-          <li class="mb-1 text-xs">
-            <a class="text-grey-darkest no-underline" href="{{ url }}">— {{ title }}</a>
-          </li>
-        {{ /taxonomy:categories }}
-      </ul>
-    </div>
-
-
-    <div class="mb-10">
-      <span class="block lined text-xs font-bold uppercase mb-4">Posts by Country</span>
-      <ul class="text-left list-reset">
-        {{ taxonomy:country }}
-          <li class="mb-1 text-xs">
-            <a class="text-grey-darkest no-underline" href="{{ url }}">— {{ title }}</a>
-          </li>
-        {{ /taxonomy:country }}
-      </ul>
-    </div>
-  </div>
+  {{ partial:default-sidebar }}
 
 {{ /section:sidebar }}
 

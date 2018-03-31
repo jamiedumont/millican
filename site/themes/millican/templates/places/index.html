@@ -1,23 +1,103 @@
-{{ partial:header }}
+{{ partial:post-header }}
 
-{{ section:main }}
 
-All Places
+<div class="w-full h-screen" id="google-map"></div>
 
-  {{ collection:places }}
 
-    <div>
-      {{ title }}
 
-      {{ country }}
-        {{ title }} - {{ emoji_flag }}
-      {{ /country }}
-    </div>
 
-  {{ /collection:places }}
+{{ section:js }}
 
-{{ /section:main }}
+  <script>
 
-{{ section:sidebar }}
+      var places = [
+        {{ collection:places }}
+          { 
+            name: '{{ title }}',
+            url: '{{ url }}',
+            {{ country }}
+              flag: '{{ emoji_flag }}',
+            {{ /country }}
+            position: {
+              lat: {{ latitude }},
+              lng: {{ longitude }}
+            },
+              description: '{{ description | sanitize }}',
+              posts: [
+                {{ collection:posts :places:contains="id"  }}
+                {
+                  title: '{{ title }}',
+                  url: '{{ url }}'
+                },
+                {{ /collection:posts }}
+                ]
+          },
+        {{ /collection:places }}
+      ];
 
-{{ /section:sidebar }}
+
+    function initMap() {
+
+      var bounds = new google.maps.LatLngBounds();
+      var map = new google.maps.Map(document.getElementById('google-map'), {});
+      map.setTilt(45);
+
+      places.forEach(function(p) {
+
+        var position = new google.maps.LatLng(p.position.lat, p.position.lng);
+        bounds.extend(position);
+
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: p.name
+        });
+
+        // Center and zoom the map to fit all places
+        map.fitBounds(bounds)
+
+        // Create the content for ech place
+        var infoContent = renderContent(p);
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: infoContent
+        });
+
+        marker.addListener('click', function() {
+          infoWindow.open(map, marker);
+        });
+
+      });
+
+    }
+
+
+    function renderContent(p) {
+      return `
+        <div class="info max-w-xs">
+          <h2>${p.flag} ${p.name}</h2>
+          <p>${p.description}</p>
+          <a href="${p.url}">Read more...</a>
+          <h3>Posts</h3>
+          <ul>
+            ${renderPosts(p)}
+          </ul>
+        </div>
+      `;
+    }
+
+    function renderPosts(p) {
+      return p.posts.map(function(post) {
+        return `<li><a href="${post.url}">${post.title}</a></li>`;
+      });
+    }
+
+
+
+  </script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-1zCGgZYjsWKpMy1958RcHWR2kdriqiA&callback=initMap">
+  </script>
+
+{{ /section:js }}

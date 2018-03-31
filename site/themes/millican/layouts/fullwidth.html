@@ -26,22 +26,6 @@
 
   {{ template_content }}
 
-  <div class="px-8 max-w-3xl mx-auto flex flex-wrap">
-    <div class="w-full md:w-2/3 lg:w-3/4">
-      {{ yield:main }}
-    </div>
-
-    <div class="w-full md:w-1/3 lg:w-1/4 md:pl-10 lg:pl-16">
-      {{ yield:sidebar }}
-
-        {{ partial:default-sidebar }}
-
-      {{ /yield:sidebar }}
-    </div>
-
-  </div>
-
-
   {{ partial:footer }}
 
   {{ yield:js }}

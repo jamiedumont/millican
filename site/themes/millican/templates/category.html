@@ -1,0 +1,12 @@
+{{ partial:category-header }}
+
+{{ section:main }}
+
+  {{ collection:posts :taxonomy:categories="title" }}
+
+    {{ partial:post-preview }}
+
+  {{ /collection:posts }}
+
+{{ /section:main }}
+
