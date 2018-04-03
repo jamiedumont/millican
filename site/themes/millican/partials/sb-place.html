@@ -1,0 +1,22 @@
+    {{ if places }}
+
+    <span class="block lined text-xs font-bold uppercase mb-4">Where are we</span>
+
+    {{ relate:places }}
+
+      <!-- google map -->
+      <div class="aspect-ratio ar--4x3 md:ar--1x1 mb-4">
+        <div class="ar__object" id="google-map"></div>
+      </div>
+
+      <div class="font-light clearfix">
+        <a class="no-underline text-grey-darkest hover:text-cherry" href="{{ url }}">
+          <h6 class="text-xl lg:text-2xl font-semibold mb-2">{{ title }}, {{ country }} {{ title }} {{ /country }}</h6>
+          <p class="text-ss text-grey-darkest mb-2">{{ latitude }}, {{ longitude }}</p>
+          <p class="text-xs text-grey-darkest leading-normal">{{ description | safe_truncate:240:... }}</p>
+        </a>
+      </div>
+
+      {{ /relate:places }}
+
+      {{ /if }}

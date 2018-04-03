@@ -1,8 +1,8 @@
-{{ partial:header }}
+{{ partial:post-header }}
 
 <div class="border-b border-grey-light">
 
-  <div class="w-5/6 max-w-2xl mx-auto">
+  <div class="px-8 md:px-16 max-w-3xl mx-auto">
 
     <div class="py-8 clearfix" id="top-info-bar">
        <dl class="mb-4 md:mb-0 inline-block">
@@ -49,7 +49,9 @@
 
        {{ /collection:posts }}
 
-   </div>
+     </div>
+
+     {{ partial:read-more }}
 
 {{ /section:main }}
 
@@ -59,28 +61,7 @@
 
 {{ section:sidebar }}
 
-<div class="my-8 text-center pt-4 border-t border-grey-lighter md:border-none">
-
-    {{ if places }}
-
-    <span class="block lined text-xs font-bold uppercase mb-4">Where are we</span>
-
-    {{ relate:places }}
-
-      <!-- google map -->
-      <div class="aspect-ratio ar--4x3 md:ar--1x1 mb-4">
-        <div class="ar__object" id="google-map"></div>
-      </div>
-
-      <a href="{{ url }}" class="block no-underline text-pink-darkest font-semibold mb-2">{{ title }}, {{ country }} {{ title }} {{ /country }}</a>
-      <p class="text-xs font-light text-gray-light mb-4">{{ latitude }}, {{ longitude }}</p>
-      <a class="px-3 py-2 no-underline rounded text-white text-xs font-semibold bg-cherry hover:bg-cherry-dark" href="{{ url }}">See more</a>
-
-      {{ /relate:places }}
-
-      {{ /if }}
-
-  </div>
+  {{ partial:post-sidebar }}
 
 {{ /section:sidebar }}
 

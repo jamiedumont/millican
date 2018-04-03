@@ -36,6 +36,10 @@
    left: -9999px;
 }
 
+.h-1\/2-screen {
+  height: 50vh;
+}
+
 @responsive {
 
   .bg-black-50 {

@@ -3,12 +3,13 @@
 {{ section:main }}
 
 
+<div class="flex">
 {{ collection:places :taxonomy:country="title" }}
 
-{{ title }}
-{{ description }}
+  {{ partial:place-preview }}
 
 {{ /collection:places }}
+</div>
 
 
 
