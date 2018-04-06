@@ -1,0 +1,7 @@
+title: API Keys
+taxonomies: false
+fields:
+  google_maps:
+    type: text
+    display: Google Maps API Key
+    instructions: Copy your Google Maps API key here from https://console.developers.google.com.

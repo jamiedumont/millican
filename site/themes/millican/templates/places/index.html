@@ -24,7 +24,7 @@
 
       var places = [
         {{ collection:places }}
-          { 
+          {
             name: '{{ title }}',
             url: '{{ url }}',
             {{ country }}
@@ -105,7 +105,7 @@
   </script>
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-1zCGgZYjsWKpMy1958RcHWR2kdriqiA&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key={{ api_keys:google_maps }}&callback=initMap">
   </script>
 
 {{ /section:js }}
