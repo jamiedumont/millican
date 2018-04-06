@@ -1,6 +1,6 @@
 <div class="clearfix py-8 border-grey-light {{ if ! last }}border-b{{ /if }}">
   {{ asset:lead_image }}
-  <img class="md:w-1/3" src="{{ url }}" alt="{{ alt }}">
+  <img class="md:w-1/3" src="{{ glide :src="url" width="512" height="384" fit="crop_focal" quality="75" }}" alt="{{ alt }}">
   {{ /asset:lead_image }}
   <div class="md:float-right md:w-2/3 md:pl-8">
     <h6 class="mt-4 md:mt-2 text-xs font-bold uppercase lined">

@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="{{ descrition or site_description }}" />
-    <meta name="twitter:image" content="{{ site_url }}{{ asset:lead_image }}{{ url }}{{ /asset:lead_image }}" />
+    <meta name="twitter:image" content="{{ asset:lead_image }}{{ glide :src="url" absolute="true" }}{{ /asset:lead_image }}" />
     <!-- <meta name="twitter:site" content="@publisher_handle" /> -->
     <!-- <meta name="twitter:creator" content="@author_handle" /> -->
 
@@ -33,7 +33,7 @@
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ permalink }}" />
-    <meta property="og:image" content="{{ site_url }}{{ asset:lead_image }}{{ url }}{{ /asset:lead_image }}" />
+    <meta property="og:image" content="{{ asset:lead_image }}{{ glide :src="url" absolute="true" }}{{ /asset:lead_image }}" />
     <meta property="og:description" content="{{ descrition or site_description }}" />
     <meta property="og:site_name" content="{{ site_name }}" />
 
