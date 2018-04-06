@@ -22,7 +22,7 @@ filesystems:
     root: site/themes
     url: /site/themes
 redactor:
-  - 
+  -
     name: Standard
     settings:
       buttons:
@@ -33,7 +33,7 @@ redactor:
         - unorderedlist
         - orderedlist
         - html
-  - 
+  -
     name: Basic
     settings:
       buttons:
@@ -45,4 +45,4 @@ locales:
   en:
     name: English
     full: en_US
-    url: /
+    url: http://millican.test

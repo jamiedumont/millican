@@ -5,16 +5,39 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Another awesome Statamic site">
+
+    <!-- Page Title: 60-70 characters -->
     <title>
       {{ title or site_name }}
       {{ if title }}
       | {{ site_name }}
       {{ /if }}
     </title>
+
+    <!-- Page description: ~160 characters -->
+    <meta name="description" content="{{ description or site_description }}">
+
+    <!-- Twitter card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ descrition or site_description }}" />
+    <meta name="twitter:image" content="{{ site_url }}{{ asset:lead_image }}{{ url }}{{ /asset:lead_image }}" />
+    <!-- <meta name="twitter:site" content="@publisher_handle" /> -->
+    <!-- <meta name="twitter:creator" content="@author_handle" /> -->
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ permalink }}" />
+    <meta property="og:image" content="{{ site_url }}{{ asset:lead_image }}{{ url }}{{ /asset:lead_image }}" />
+    <meta property="og:description" content="{{ descrition or site_description }}" />
+    <meta property="og:site_name" content="{{ site_name }}" />
+
+
     <link rel="stylesheet" href="{{ theme:css }}">
     <script src="{{ theme:js }}" defer></script>
 </head>

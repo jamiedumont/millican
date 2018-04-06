@@ -63,7 +63,7 @@ fields:
     collection:
       - places
     instructions: "New _'Places'_ can't be added here. Create one first, then come back and add it to the _'Post'_."
-  summary:
+  description:
     type: textarea
     display: Summary
     instructions: "Used in the post preview. A brief summary or teaser to the post's content."
