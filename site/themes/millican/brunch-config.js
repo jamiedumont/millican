@@ -33,7 +33,17 @@ exports.config = {
   },
 
   npm: {
-    enabled: true
+    styles: {
+      photoswipe: [
+        'dist/photoswipe.css'
+      ]
+    },
+    globals: {
+      Photoswipe: 'photoswipe'
+    },
+    static: [
+      'photoswipe/dist/photoswipe-ui-default.min.js'
+    ]
   },
 
   modules: {
