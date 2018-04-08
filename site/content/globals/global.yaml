@@ -1,5 +1,8 @@
 site_name: Millican
 site_description: "Fallback description used when some content doesn't have any available."
 contact_email: test@millican.com
+logo: /assets/logos/millican-logo.svg
+lead_image:
+  - /assets/lead_images/StockSnap_DXWAZS0MY7.jpg
 fieldset: global
 id: 7d6e11dd-d647-46f4-8474-277be6a375df

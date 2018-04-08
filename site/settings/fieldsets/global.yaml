@@ -1,5 +1,6 @@
 title: Globals
 taxonomies: false
+hide: true
 fields:
   site_name:
     type: text
@@ -7,24 +8,31 @@ fields:
   site_description:
     type: textarea
     display: Site Description
-    instructions: Write a brief paragraph about your site. This will be used to help SEO. 50-300 characters is considered "optimal" by Google.
+    instructions: >
+      Write a brief paragraph about your site. This will be used to help SEO. 50-300 characters is
+      considered "optimal" by Google.
   contact_email:
     type: text
     display: Contact Email
-    instructions: Email address used in footer. Leave blank if you don't want to share an address.
+    instructions: "Email address used in footer. Leave blank if you don't want to share an address."
   logo:
     type: assets
     display: Logo
-    instructions: Upload your logo, if you have one. It should be a JPEG, PNG or SVG.
+    instructions: Upload your logo. A PNG with a transparent background, or SVG is recommended.
     container: main
     folder: /logos
     restrict: true
-    max: '1'
+    max: "1"
+    max_files: 1
+    mode: grid
+    validate: required
   lead_image:
     type: assets
     display: Lead Image
-    instructions: Fallback image for the header on each page. Will be overridden by any Lead Images declared on individual pages.
+    instructions: >
+      Fallback image for the header on each page. Will be overridden by any Lead Images declared on
+      individual pages.
     container: main
     folder: /lead_images
     restrict: true
-    max: '1'
+    max: "1"

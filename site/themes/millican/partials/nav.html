@@ -2,7 +2,13 @@
 
     <h1 class="ma-0 relative z-30">
       <a class="mx-auto text-{{ colour }} w-32 lg:w-48 block" href="/">
-         {{ theme:output src="img/millican-logo.svg" }}
+        {{ assets:logo }}
+          {{ if extension == "svg" }}
+            {{ url | output }}
+          {{ else }}
+            <img src="{{ glide :src="url" }}" alt="{{ site_title }}">
+          {{ /if }}
+        {{ /assets:logo }}
          <span class="absolute h-0 l-9999">{{ site_title }}</span>
       </a>
     </h1>
