@@ -3,10 +3,42 @@
 {{ section:main }}
 
 
-<div class="flex">
-{{ collection:places :taxonomy:country="title" }}
+<div id="collection" class="mt-8 mb-16 pt-4">
+{{ collection:places paginate="true" as="places" limit="10" :taxonomy:country="title" }}
 
-  {{ partial:place-preview }}
+{{ if no_results }}
+  <p class="text-sm italic text-grey-darkest">No results</p>
+{{ else }}
+
+  {{ paginate }}
+
+    {{ if total_items == 1 }}
+      <p class="text-sm italic text-grey-darkest">1 result</p>
+    {{ else }}
+      <p class="text-sm italic text-grey-darkest">{{ total_items }} results</p>
+    {{ /if }}
+
+  {{ /paginate }}
+
+  {{# Loop over posts #}}
+  {{ places }}
+
+    {{ partial:place-preview }}
+
+  {{ /places }}
+
+  {{ paginate }}
+
+    {{ if total_pages > 1 }}
+
+    {{ partial:pagination }}
+
+    {{ /if }}
+
+  {{ /paginate }}
+
+{{# end if no_results #}}
+{{ /if }}
 
 {{ /collection:places }}
 </div>

@@ -2,11 +2,46 @@
 
 {{ section:main }}
 
-  {{ collection:posts :taxonomy:categories="title" }}
+<div id="collection" class="pt-4 my-8">
 
-    {{ partial:post-preview }}
+  {{ collection:posts paginate="true" limit="10" as="posts" :taxonomy:categories="title" }}
+
+  {{ if no_results }}
+    <p class="text-sm italic text-grey-darkest">No results</p>
+  {{ else }}
+
+    {{ paginate }}
+
+      {{ if total_items == 1 }}
+        <p class="text-sm italic text-grey-darkest">1 result</p>
+      {{ else }}
+        <p class="text-sm italic text-grey-darkest">{{ total_items }} results</p>
+      {{ /if }}
+
+    {{ /paginate }}
+
+    {{# Loop over posts #}}
+    {{ posts }}
+
+      {{ partial:post-preview }}
+
+    {{ /posts }}
+
+    {{ paginate }}
+
+      {{ if total_pages > 1 }}
+
+      {{ partial:pagination }}
+
+      {{ /if }}
+
+    {{ /paginate }}
+
+  {{# end if no_results #}}
+  {{ /if }}
 
   {{ /collection:posts }}
 
-{{ /section:main }}
+</div>
 
+{{ /section:main }}
