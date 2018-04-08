@@ -1,0 +1,26 @@
+<div id="{{ title }}" class="mb-4 bg-white text-grey-darkest">
+
+  <div class="md:hidden">
+    <!-- Google static map"-->
+    <div class="aspect-ratio ar--16x9">
+      <img class="ar__object" src="https://maps.googleapis.com/maps/api/staticmap?center={{ latitude }},{{ longitude }}&zoom=8&size=630x360&scale=2&key={{ api_keys:google_maps }}" alt="{{ title }}">
+    </div>
+  </div>
+
+  <div class="hidden md:block">
+    {{ asset:lead_image }}
+    <img class="" src="{{ glide :src="url" width="1260" height="720" quality="60" fit="crop_focal" }}" alt="{{ alt }}">
+    {{ /asset:lead_image }}
+  </div>
+
+  <div class="clearfix p-4">
+    <h6 class="text-xs font-bold uppercase lined">
+      {{ country }} {{ title }} {{ /country }}
+    </h6>
+
+    <h2 class="mb-2 mt-2 md:mt-4 text-xl">{{ title }}</h2>
+    <p class="text-xs leading-normal mb-4 text-grey-dark">{{ description | safe_truncate:240:... }}</p>
+
+    <a class="float-right text-xs px-3 py-2 bg-cherry hover:bg-cherry-dark rounded text-white uppercase font-bold no-underline" href="{{ url }}">Read more</a>
+  </div>
+</div>

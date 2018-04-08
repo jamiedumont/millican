@@ -1,20 +1,24 @@
-{{ partial:headers/default }}
+<div class="clearfix">
 
-<div class="bg-black px-4 md:px-8 pb-8">
-  <div class="w-full h-1/2-screen" id="google-map"></div>
+  <div class="absolute overflow-y-scroll h-screen p-4 bg-black w-full md:w-1/2 lg:w-1/4">
+
+    {{ partial:nav colour="white" }}
+    <h1 class="text-white my-4 text-center">All Places</h1>
+    <div class="">
+      {{ collection:places sort="country" limit="15" paginate="true" as="places" }}
+
+      {{ places }}
+        {{ partial:place-card }}
+      {{ /places }}
+
+      {{ auto_links }}
+
+
+      {{ /collection:places }}
+    </div>
   </div>
 
-<div class="my-8 w-5/6 mx-auto">
-  {{ collection:places sort="country" limit="15" paginate="true" as="places" }}
-
-  {{ places }}
-    {{ partial:place-preview }}
-  {{ /places }}
-
-  {{ auto_links }}
-
-
-  {{ /collection:places }}
+  <div class="hidden md:block md:float-right md:w-1/2 lg:w-3/4 md:h-screen" id="google-map"></div>
 </div>
 
 
@@ -76,7 +80,8 @@
         });
 
         marker.addListener('click', function() {
-          infoWindow.open(map, marker);
+          window.location.hash = p.name;
+          //infoWindow.open(map, marker);
         });
 
       });
