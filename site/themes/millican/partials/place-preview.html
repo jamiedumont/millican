@@ -1,16 +1,17 @@
 <div class="clearfix py-8 border-grey-light {{ if ! last }}border-b{{ /if }}">
+  <a href={{ url }}>
   {{ asset:lead_image }}
   <img class="md:w-1/3" src="{{ glide :src="url" width="512" height="384" fit="crop_focal" quality="75" }}" alt="{{ alt }}">
   {{ /asset:lead_image }}
   <div class="md:float-right md:w-2/3 md:pl-8">
-    <h6 class="mt-4 md:mt-2 text-xs font-bold uppercase lined">
+    <h6 class="mt-4 md:mt-2 text-black text-xs font-bold uppercase lined">
       {{ country }} {{ title }} {{ /country }}
     </h6>
 
-    <h2 class="mb-2 mt-2 md:mt-4 text-2xl md:text-3xl">{{ title }}</h2>
-    <p class="text-xs text-grey-darkest leading-normal mb-2">{{ date }}</p>
+    <h2 class="text-black mb-2 mt-2 md:mt-4 text-2xl md:text-3xl">{{ title }}</h2>
     <p class="text-sm md:text-base leading-normal mb-4 text-grey-dark">{{ description | safe_truncate:240:... }}</p>
 
-    <a class="float-right text-sm px-3 py-2 bg-cherry hover:bg-cherry-dark rounded text-white uppercase font-bold no-underline" href="{{ url }}">Read more</a>
+    <span class="float-right text-sm px-3 py-2 bg-cherry hover:bg-cherry-dark rounded text-white uppercase font-bold no-underline">Read more</span>
   </div>
+  </a>
 </div>
