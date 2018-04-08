@@ -1,7 +1,16 @@
 taxonomies: false
 title: Country
+hide: true
 fields:
   emoji_flag:
     type: text
     display: Emoji flag
     instructions: Find the correct flag from your Emojis and put it here.
+  lead_image:
+    type: assets
+    display: Lead Image
+    container: main
+    folder: /
+    restrict: false
+    max_files: 1
+    mode: grid

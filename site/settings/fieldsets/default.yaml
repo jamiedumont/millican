@@ -1,6 +1,14 @@
 title: Default
 taxonomies: false
 fields:
+  lead_image:
+    type: assets
+    display: Lead Image
+    container: main
+    folder: img
+    restrict: false
+    max_files: 1
+    mode: grid
   content_area:
     type: bard
     display: Content
@@ -46,3 +54,4 @@ fields:
     target_blank: true
     link_validation: true
     restrict_assets: true
+    clean_pasted_html: false

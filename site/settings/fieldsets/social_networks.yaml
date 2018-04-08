@@ -1,5 +1,6 @@
 title: Social Networks
 taxonomies: false
+hide: true
 fields:
   facebook:
     type: section

@@ -1,5 +1,6 @@
 title: API Keys
 taxonomies: false
+hide: true
 fields:
   google_maps:
     type: text

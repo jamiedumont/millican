@@ -1,6 +1,12 @@
-taxonomies:
-  place: true
-  tour: true
+taxonomies: false
 title: Category
 hide: true
-fields: [ ]
+fields:
+  lead_image:
+    type: assets
+    display: Lead Image
+    container: main
+    folder: /
+    restrict: false
+    max_files: 1
+    mode: grid

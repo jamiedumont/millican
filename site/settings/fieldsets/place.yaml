@@ -3,18 +3,28 @@ taxonomies:
     max_items: 1
 title: Place
 create_title: Place
+hide: true
 fields:
   description:
     type: textarea
     display: Description
     instructions: Brief description of the place, what there is to do, what you liked about it, etc...
+  lead_image:
+    type: assets
+    display: Lead Image
+    container: main
+    folder: /
+    restrict: false
+    max_files: 1
+    mode: grid
   gallery:
     type: assets
     display: Gallery
-    instructions: A gallery of the photos you've taken here.
+    instructions: "A gallery of the photos you've taken here."
     container: main
     folder: img/places
     mode: grid
+    restrict: false
   location:
     type: section
     display: Location
