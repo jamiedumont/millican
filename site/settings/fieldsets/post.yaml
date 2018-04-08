@@ -2,6 +2,7 @@ taxonomies:
   categories: true
 title: Post
 create_title: Post
+hide: true
 fields:
   lead_image:
     type: assets
@@ -11,6 +12,19 @@ fields:
     restrict: true
     max_files: 1
     mode: grid
+    validate: required
+  author:
+    type: users
+    display: Author
+    max_items: 1
+    label: '{{ first_name }}'
+    mode: tags
+    validate: required
+  description:
+    type: textarea
+    display: Summary
+    instructions: "Used in the post preview & search engine results. A brief summary or teaser to the post's content. ~160 characters is ideal."
+    validate: required
   content_area:
     type: bard
     display: Content
@@ -56,6 +70,7 @@ fields:
     target_blank: true
     link_validation: true
     restrict_assets: true
+    clean_pasted_html: false
   places:
     type: collection
     display: Places
@@ -63,7 +78,3 @@ fields:
     collection:
       - places
     instructions: "New _'Places'_ can't be added here. Create one first, then come back and add it to the _'Post'_."
-  description:
-    type: textarea
-    display: Summary
-    instructions: "Used in the post preview. A brief summary or teaser to the post's content."

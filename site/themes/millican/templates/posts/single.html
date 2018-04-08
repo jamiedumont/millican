@@ -11,7 +11,11 @@
        </dl>
        <dl class="block md:inline-block md:mx-8">
           <dd class="text-xs font-light tracking-wide uppercase mb-2">Author</dd>
-          <dd class="text-sm font-semibold">Martin</dd>
+          <dd class="text-sm font-semibold">
+            {{ relate:author }} 
+              {{ first_name }}
+            {{ /relate:author }}
+          </dd>
        </dl>
      </div>
 
