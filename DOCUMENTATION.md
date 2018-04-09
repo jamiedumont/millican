@@ -13,10 +13,15 @@ Whilst you can just install the theme as above and see the site running, you'll 
 
 ### Global Variables
 A number of global variables have been setup to help you customise the theme.
+
 `site_name`: The name of your site that appears in the browser's tab, search results, etc
+
 `site_description`: A description of your site and it's content that it used as a fallback in search engine results when a more specific description is unavailble.
+
 `contact_email`: A contact email address that is used in the footer of the site.
+
 `logo`: Your logo. A PNG with a transparent background, or and SVG is best. If you use an SVG that inherits it's fill colour (as per the example Millican logo) then it will respond the `colour` variable that is passed to `{{ partial:nav colour="white" }}` and change colour on hover.
+
 `lead_image`: A fallback image used in page headers when one hasn't been explicitely set by the page or entry.
 
 An API key is also needed for Google's JS maps and Static maps. This is stored under `{{ api_keys:google_maps }}` variable. I have included an API key in the repo so that you can preview the site without setting up your own keys. *Please, please, please change this for your own keys otherwise I'll be forced to revoke the included ones!*
@@ -40,6 +45,7 @@ Millican uses [TailwindCSS](https://tailwindcss.com) for styling, which is most 
 If you don't already have Brunch installed globally, you'll need to do so using either Yarn or NPM:
 
 NPM: `npm install brunch -g`
+
 Yarn: `yarn global brunch`
 
 Whilst you _could_ run Brunch from `node_modules` without installing it globally, it's more fiddly to use like this.
@@ -90,4 +96,4 @@ Full details can be found at Tailwind's [docs](https://tailwindcss.com/docs/what
 Most of Millican's templates use Statamic partials (`{{ partial:xyz }}`) wherever possible to make it easy to move blocks of code around and reduce repetition.
 
 ## Support
-For any help installing or customising the theme, please just [email me](mailto:jamiedumont@icloud.com)
+For any help installing or customising the theme, please just [email me](mailto:jamiedumont@icloud.com).
