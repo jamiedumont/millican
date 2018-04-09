@@ -5,7 +5,7 @@ fields:
     type: assets
     display: Lead Image
     container: main
-    folder: img
+    folder: /
     restrict: false
     max_files: 1
     mode: grid
@@ -28,9 +28,10 @@ fields:
             type: assets
             display: Image
             container: main
-            folder: img
+            folder: /
             max_files: 1
             mode: grid
+            restrict: false
         instructions: A full width image, with a caption underneath.
       three_images:
         display: Three Images
@@ -43,6 +44,7 @@ fields:
             container: main
             folder: /
             max_files: 3
+            restrict: false
       video:
         display: Video
         fields:

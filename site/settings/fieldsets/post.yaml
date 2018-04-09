@@ -8,8 +8,8 @@ fields:
     type: assets
     display: Lead Image
     container: main
-    folder: img
-    restrict: true
+    folder: places
+    restrict: false
     max_files: 1
     mode: grid
     validate: required
@@ -32,7 +32,7 @@ fields:
     allow_source: true
     force_plain_text: true
     container: main
-    folder: img
+    folder: places
     sets:
       image_with_caption:
         display: Image with caption
@@ -44,9 +44,10 @@ fields:
             type: assets
             display: Image
             container: main
-            folder: img
+            folder: places
             max_files: 1
             mode: grid
+            restrict: false
         instructions: A full width image, with a caption underneath.
       three_images:
         display: Three Images
@@ -57,8 +58,10 @@ fields:
             display: Images
             instructions: Select three images.
             container: main
-            folder: /
+            folder: places
             max_files: 3
+            restrict: false
+            mode: grid
       video:
         display: Video
         fields:
@@ -69,7 +72,7 @@ fields:
     autoLink: true
     target_blank: true
     link_validation: true
-    restrict_assets: true
+    restrict_assets: false
     clean_pasted_html: false
   places:
     type: collection

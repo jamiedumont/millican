@@ -13,7 +13,7 @@ fields:
     type: assets
     display: Lead Image
     container: main
-    folder: /
+    folder: places
     restrict: false
     max_files: 1
     mode: grid
@@ -22,7 +22,7 @@ fields:
     display: Gallery
     instructions: "A gallery of the photos you've taken here."
     container: main
-    folder: img/places
+    folder: places
     mode: grid
     restrict: false
   location:
