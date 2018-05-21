@@ -1,7 +1,8 @@
 {
   "scripts": {
     "deploy": "brunch build --production",
-    "watch": "brunch watch --stdin"
+    "watch": "brunch watch --stdin",
+    "css:purge": "./node_modules/purgecss/bin/purgecss -c purge.config.js -o css"
   },
   "private": true,
   "devDependencies": {
@@ -14,6 +15,7 @@
     "postcss-import": "^11.0.0",
     "postcss-nested": "^3.0.0",
     "postcss-smart-import": "^0.7.6",
+    "purgecss": "^0.21.0",
     "tailwindcss": "^0.4.1",
     "uglify-js-brunch": "2.10.0"
   },
