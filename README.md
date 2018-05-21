@@ -4,4 +4,4 @@ The two main Collections are "Posts" and "Places" and can be managed totally sep
 
 The content areas are powered by Bard with a few content sets to get you started. The theme is styled with TailwindCSS so is totally customisable if that's your thing.
 
-Millican is lightweight and fast. All images are optimised with Glide and cached, and the CSS weighs in at just 40kB and JS at 16kB. Even on a modest server you should be seeing sub-second load times (image and location dependent of course).
+Millican is lightweight and fast. All images are optimised with Glide and cached, and the CSS weighs in at just ~~40kB~~ 3kB (with use of PurgeCSS) and JS at 16kB. Even on a modest server you should be seeing sub-second load times (image and location dependent of course).
