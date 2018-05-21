@@ -1,5 +1,3 @@
-# Millican - Documentation
-
 ## Getting Started
 
 1. Install a fresh copy of Statamic following the instructions in the [docs](https://docs.statamic.com/installing)
@@ -64,6 +62,9 @@ It's best to run: `brunch build --production` before deploying, as this will min
 Full details of how Brunch works can be found at it's [documentation](https://brunch.io/docs/getting-started), but here's a brief summary. Any files without a preceding underscore (e.g. `_example.css`) will automatically be concatenated with the main file (`millican.css`). Files with an underscore at the start of their filename must be imported.
 
 Brunch has been configured to use PostCSS to import, format and autoprefix CSS.
+
+#### NEW! PurgeCSS
+You can now optionally run `npm run css:purge` after your Brunch build (before deployment for example) to reduce the size of the CSS down to around 3kB!
 
 ### TailwindCSS
 
