@@ -10,3 +10,4 @@ phpunit.xml
 please
 index.php
 Caddyfile
+*.swp
