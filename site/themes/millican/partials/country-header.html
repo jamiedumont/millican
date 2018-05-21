@@ -1,7 +1,9 @@
+{{ asset:lead_image }}
 <header
-  class="relative min-h-24rem md:min-h-28rem lg:min-h-36rem bg-black w-full bg-center bg-cover"
-  style="{{ asset:lead_image}}background-image:url('{{ glide width="2800" quality="60" fit="crop_focal" :src="url" brightness="-20" contrast="-20" }}');{{ /asset:lead_image }}"
+  class="relative min-h-24rem md:min-h-28rem lg:min-h-36rem bg-cover bg-black w-full"
+  style="background-image: url('{{ glide:url width="2800" fit="crop_focal" }}'); background-position: {{ focus_css }};"
 >
+{{ /asset:lead_image }}
 
   {{ partial:nav colour="white" }}
 
