@@ -16,3 +16,7 @@ For a time, I made some themes for Statamic to sell on their marketplace. I rele
 I decided to focus my attention on the work that I enjoyed (custom applications with Elixir) and problems I wanted to solve (a Crossfit app that properly tracked an athletes progress). That meant stepping back from my client work (with Statamic), the theme building and the tutorials that I used to publish on my blog.
 
 I'm opening up all my private repos in the hope that someone might find them useful, even if the sites aren't complete or exactly matching your usecase.
+
+## Support
+I no longer actively work with Statamic, so won't be providing ongoing support. If you're having issues then I can thoroughly reccommend the Statamic Discord server as a great place to find help.
+
